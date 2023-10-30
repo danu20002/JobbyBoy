@@ -4,6 +4,8 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">#000000</item>
+        <item name="boxStrokeColor">@color/purple_200</item>
+        <item name="hintTextColor">@color/purple_200</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
