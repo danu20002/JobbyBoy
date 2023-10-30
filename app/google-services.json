@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "79919183360",
+    "project_id": "jobbyboy-15298",
+    "storage_bucket": "jobbyboy-15298.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79919183360:android:4d844514fd633076964ae5",
+        "android_client_info": {
+          "package_name": "com.daneshnaik.jobbyboy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBJLXqK8GeyqPUYPCg6utcAVirfE7Hb7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

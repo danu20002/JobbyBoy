@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -86,6 +91,7 @@
                     android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:textStyle="bold"
+                    android:id="@+id/email_signin"
                     android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
                     android:drawableEnd="@drawable/baseline_email_24"
                     android:textColorHint="@color/white"
@@ -125,9 +131,9 @@
                     android:inputType="textPassword"
                     android:textStyle="bold"
                     android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
-
+                   android:id="@+id/password_signin"
                     android:textColorHint="@color/white"
-                    android:autofillHints="emailAddress"
+                    android:autofillHints="password"
                     android:textColor="@color/white"/>
 
 
@@ -139,6 +145,7 @@
                 android:text="Forgot your password?"
                 android:textStyle="bold"
                 android:textAlignment="textEnd"
+                android:id="@+id/forgot_text_signin"
                 android:layout_marginBottom="15dp"
                 android:layout_marginRight="20dp"/>
 
@@ -152,6 +159,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/btn_background"
                 android:textStyle="bold"
+                android:id="@+id/signin_btn_signin"
                 android:text="Sign In"/>
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -181,7 +189,16 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+    </ScrollView>
 
-
-
-</ScrollView>
+<com.airbnb.lottie.LottieAnimationView
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    app:lottie_rawRes="@raw/loading"
+    android:layout_centerInParent="true"
+    app:lottie_loop="true"
+    app:lottie_autoPlay="true"
+    android:visibility="gone"
+    android:id="@+id/loading_signin"
+    />
+</RelativeLayout>
