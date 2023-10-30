@@ -164,7 +164,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#A69191"
                     android:textStyle="normal"
-                    android:text="Be a part of out Community?"/>
+                    android:text="Be a part of our Community?"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

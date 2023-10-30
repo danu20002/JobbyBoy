@@ -13,6 +13,7 @@ TextView btn_signup_login;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btn_signup_login=findViewById(R.id.signup_btn_login);
         btn_signup_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
