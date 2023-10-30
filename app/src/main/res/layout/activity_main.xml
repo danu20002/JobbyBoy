@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/jobb_logo"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:textStyle="bold"
+                android:text="JobbyBoy"
+                android:textSize="45sp"
+                android:textColor="@color/white"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:text="Welcome!"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:text="Please Enter your details."
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                app:boxStrokeColor="@color/purple_200"
+                app:boxStrokeWidthFocused="@dimen/cardview_default_radius"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxBackgroundColor="@color/backgroundsetter"
+                app:boxStrokeWidth="2dp"
+                android:layout_marginLeft="20dp"
+                app:helperTextEnabled="true"
+                android:textColorHint="@color/white"
+                app:helperText="Please Enter your Email"
+                app:helperTextTextColor="@color/white"
+                app:helperTextTextAppearance="@color/backgroundsetter"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:theme="@style/EditTextThemeOverlay">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textStyle="bold"
+                    android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
+                    android:drawableEnd="@drawable/baseline_email_24"
+                    android:textColorHint="@color/white"
+                    android:autofillHints="emailAddress"
+                    android:textColor="@color/white"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                app:boxStrokeColor="@color/purple_200"
+                app:boxStrokeWidthFocused="@dimen/cardview_default_radius"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxBackgroundColor="@color/backgroundsetter"
+                app:boxStrokeWidth="2dp"
+                android:layout_marginLeft="20dp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white"
+                android:textColorHint="@color/white"
+                app:helperTextEnabled="true"
+                app:helperText="One Capital letter and Number Required"
+                app:helperTextTextColor="@color/white"
+                app:helperTextTextAppearance="@color/backgroundsetter"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:theme="@style/EditTextThemeOverlay">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textStyle="bold"
+                    android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
+
+                    android:textColorHint="@color/white"
+                    android:autofillHints="emailAddress"
+                    android:textColor="@color/white"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Forgot your password?"
+                android:textStyle="bold"
+                android:textAlignment="textEnd"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="20dp"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_background"
+                android:textStyle="bold"
+                android:text="Sign In"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#A69191"
+                    android:textStyle="normal"
+                    android:text="Be a part of out Community?"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:textStyle="bold"
+                    android:id="@+id/signup_btn_login"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"
+                    android:paddingLeft="5dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+</ScrollView>
