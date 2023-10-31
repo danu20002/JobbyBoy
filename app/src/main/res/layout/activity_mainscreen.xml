@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".activities.mainscreen">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/meowbottomnav">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+    </FrameLayout>
 <com.etebarian.meowbottomnavigation.MeowBottomNavigation
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
