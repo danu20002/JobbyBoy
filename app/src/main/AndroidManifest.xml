@@ -13,17 +13,20 @@
         android:theme="@style/Theme.JobbyBoy"
         tools:targetApi="31">
         <activity
-            android:name=".activities.User_sign_up"
+            android:name=".mainscreen"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".User_sign_up"
+            android:exported="false" />
+        <activity0
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity0>
     </application>
 
 </manifest>

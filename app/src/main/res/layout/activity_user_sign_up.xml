@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".activities.User_sign_up">
+    tools:context=".User_sign_up">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
