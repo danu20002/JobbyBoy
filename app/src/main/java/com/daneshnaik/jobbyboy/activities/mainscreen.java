@@ -1,4 +1,4 @@
-package com.daneshnaik.jobbyboy;
+package com.daneshnaik.jobbyboy.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
