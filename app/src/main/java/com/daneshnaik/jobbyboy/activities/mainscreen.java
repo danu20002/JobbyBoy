@@ -18,7 +18,9 @@ public class mainscreen extends AppCompatActivity {
         bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.baseline_home_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.baseline_recommend_24));
 
-        bottomNavigation.add(new MeowBottomNavigation.Model(4,R.drawable.baseline_person_4_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(4,R.drawable.baseline_chat_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.baseline_person_4_24));
     }
 }
+
+
