@@ -11,32 +11,23 @@
         android:layout_height="match_parent"
         android:id="@+id/frame_layout"
         android:layout_above="@id/bottomBar_main">
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                
-            </androidx.appcompat.widget.LinearLayoutCompat>
-        </ScrollView>
+
     </FrameLayout>
 <me.ibrahimsn.lib.SmoothBottomBar
     android:id="@+id/bottomBar_main"
     android:layout_width="match_parent"
     android:layout_height="60dp"
-    app:backgroundColor="#1D9322"
+    app:backgroundColor="#03A9F4"
     app:iconSize="25dp"
     app:iconTint="@color/white"
     android:layout_alignParentBottom="true"
     app:indicatorRadius="15dp"
-    app:cornerRadius="20dp"
+    app:cornerRadius="10dp"
     app:corners="all"
     app:sideMargins="5dp"
     app:textColor="@color/black"
     app:textSize="15sp"
     app:iconTintActive="@color/white"
-    app:duration="500"
+    app:duration="400"
     app:menu="@menu/menu_bottam"/>
 </RelativeLayout>

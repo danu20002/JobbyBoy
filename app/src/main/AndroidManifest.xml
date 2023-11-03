@@ -14,17 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobbyBoy"
         tools:targetApi="31">
-        <activity
-            android:name=".activities.profile"
-            android:exported="false" />
-        <activity
-            android:name=".activities.Chat"
-            android:exported="false" />
-        <activity
-            android:name=".activities.Recommend"
-            android:exported="false" />
+
         <activity
             android:name=".activities.mainscreen"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
         <activity
             android:name=".activities.User_sign_up"
