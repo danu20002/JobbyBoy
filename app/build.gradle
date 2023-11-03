@@ -44,8 +44,8 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     implementation 'com.airbnb.android:lottie:6.1.0'
-
-
+//smooth
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
     //bottom nav
     implementation 'com.etebarian:meow-bottom-navigation:1.2.0'
 }

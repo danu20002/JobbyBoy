@@ -1,26 +1,60 @@
 package com.daneshnaik.jobbyboy.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.widget.FrameLayout;
 
 import com.daneshnaik.jobbyboy.R;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
+import me.ibrahimsn.lib.OnItemSelectedListener;
+import me.ibrahimsn.lib.SmoothBottomBar;
+
 public class mainscreen extends AppCompatActivity {
-    MeowBottomNavigation bottomNavigation;
+SmoothBottomBar bottombar_main;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainscreen);
-        bottomNavigation=findViewById(R.id.meowbottomnav);
-        bottomNavigation.show(1,true);
-        bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.baseline_home_24));
-        bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.baseline_recommend_24));
-        bottomNavigation.add(new MeowBottomNavigation.Model(4,R.drawable.baseline_chat_24));
-        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.baseline_person_4_24));
+        bottombar_main=findViewById(R.id.bottomBar_main);
+        replace(new main_screen_frag());
+
+      bottombar_main.setOnItemSelectedListener(new OnItemSelectedListener() {
+          @Override
+          public boolean onItemSelect(int i) {
+
+              switch (i){
+                  case 0:
+                      replace(new main_screen_frag());
+                      break;
+                  case 1:
+                      replace(new recommend_frag());
+                      break;
+                  case 2:
+                      replace(new chat_frag());
+                      break;
+                  case 3:
+                      replace(new profile_frag());
+                      break;
+              }
+              return true;
+          }
+      });
 
     }
+
+    private void replace(Fragment fragment) {
+        FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout,fragment);
+        transaction.commit();
+
+    }
+
+
 }
 
 

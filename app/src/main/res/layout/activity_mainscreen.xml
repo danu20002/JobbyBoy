@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8BC34A"
+    android:background="@color/black"
     tools:context=".activities.mainscreen">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/meowbottomnav">
+        android:id="@+id/frame_layout"
+        android:layout_above="@id/bottomBar_main">
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -21,12 +22,21 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
         </ScrollView>
     </FrameLayout>
-<com.etebarian.meowbottomnavigation.MeowBottomNavigation
+<me.ibrahimsn.lib.SmoothBottomBar
+    android:id="@+id/bottomBar_main"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-   app:mbn_circleColor="@color/white"
-
-    android:id="@+id/meowbottomnav"
-    android:layout_alignParentBottom="true"/>
-
+    android:layout_height="60dp"
+    app:backgroundColor="#1D9322"
+    app:iconSize="25dp"
+    app:iconTint="@color/white"
+    android:layout_alignParentBottom="true"
+    app:indicatorRadius="15dp"
+    app:cornerRadius="20dp"
+    app:corners="all"
+    app:sideMargins="5dp"
+    app:textColor="@color/black"
+    app:textSize="15sp"
+    app:iconTintActive="@color/white"
+    app:duration="500"
+    app:menu="@menu/menu_bottam"/>
 </RelativeLayout>
