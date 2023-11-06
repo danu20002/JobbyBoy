@@ -1,10 +1,338 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F31515"
+    android:background="@color/black"
     tools:context=".activities.job_adder">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textStyle="bold"
+               android:textSize="30sp"
+               android:textColor="@color/white"
+               android:text="Add Job Details"
+               android:textAlignment="center"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:layout_marginRight="20dp"
+               app:boxStrokeColor="#E4400C"
+               app:boxStrokeWidthFocused="@dimen/cardview_default_radius"
+               app:boxCornerRadiusBottomStart="10dp"
+               app:boxCornerRadiusTopStart="10dp"
+               app:boxCornerRadiusBottomEnd="10dp"
+               app:boxCornerRadiusTopEnd="10dp"
+               app:boxBackgroundColor="@color/backgroundsetter"
+               app:boxStrokeWidth="2dp"
+               android:layout_marginLeft="20dp"
+               app:helperTextEnabled="true"
+               android:textColorHint="@color/white"
+               app:helperText="Please Enter Company Name"
+               app:helperTextTextColor="@color/white"
+               app:helperTextTextAppearance="@color/backgroundsetter"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:theme="@style/EditTextThemeOverlay">
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="company Name"
+                   android:inputType="text|textMultiLine"
+                   android:textStyle="bold"
+                   android:id="@+id/companyname_jobadder"
+                   android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
+                   android:drawableEnd="@drawable/baseline_drive_file_rename_outline_24"
+                   android:textColorHint="@color/white"
+                   android:textColor="@color/white"/>
+
+
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:layout_marginRight="20dp"
+               app:boxStrokeColor="#E4400C"
+               app:boxStrokeWidthFocused="@dimen/cardview_default_radius"
+               app:boxCornerRadiusBottomStart="10dp"
+               app:boxCornerRadiusTopStart="10dp"
+               app:boxCornerRadiusBottomEnd="10dp"
+               app:boxCornerRadiusTopEnd="10dp"
+               app:boxBackgroundColor="@color/backgroundsetter"
+               app:boxStrokeWidth="2dp"
+               android:layout_marginLeft="20dp"
+               app:helperTextEnabled="true"
+               android:textColorHint="@color/white"
+               app:helperText="Please Enter Location"
+               app:helperTextTextColor="@color/white"
+               app:helperTextTextAppearance="@color/backgroundsetter"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:theme="@style/EditTextThemeOverlay">
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Location"
+                   android:inputType="text|textMultiLine"
+                   android:textStyle="bold"
+                   android:id="@+id/location_jobadder"
+                   android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
+                   android:drawableEnd="@drawable/baseline_drive_file_rename_outline_24"
+                   android:textColorHint="@color/white"
+                   android:textColor="@color/white"/>
+
+
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:layout_marginRight="20dp"
+               app:boxStrokeColor="#E4400C"
+               app:boxStrokeWidthFocused="@dimen/cardview_default_radius"
+               app:boxCornerRadiusBottomStart="10dp"
+               app:boxCornerRadiusTopStart="10dp"
+               app:boxCornerRadiusBottomEnd="10dp"
+               app:boxCornerRadiusTopEnd="10dp"
+               app:boxBackgroundColor="@color/backgroundsetter"
+               app:boxStrokeWidth="2dp"
+               android:layout_marginLeft="20dp"
+               app:helperTextEnabled="true"
+               android:textColorHint="@color/white"
+               app:helperText="Please Enter Job Role"
+               app:helperTextTextColor="@color/white"
+               app:helperTextTextAppearance="@color/backgroundsetter"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:theme="@style/EditTextThemeOverlay">
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Job Role"
+                   android:inputType="text|textMultiLine"
+                   android:textStyle="bold"
+                   android:id="@+id/jobrole_jobadder"
+                   android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
+                   android:drawableEnd="@drawable/baseline_drive_file_rename_outline_24"
+                   android:textColorHint="@color/white"
+                   android:textColor="@color/white"/>
+
+
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:layout_marginRight="20dp"
+               app:boxStrokeColor="#E4400C"
+               app:boxStrokeWidthFocused="@dimen/cardview_default_radius"
+               app:boxCornerRadiusBottomStart="10dp"
+               app:boxCornerRadiusTopStart="10dp"
+               app:boxCornerRadiusBottomEnd="10dp"
+               app:boxCornerRadiusTopEnd="10dp"
+               app:boxBackgroundColor="@color/backgroundsetter"
+               app:boxStrokeWidth="2dp"
+               android:layout_marginLeft="20dp"
+               app:helperTextEnabled="true"
+               android:textColorHint="@color/white"
+               app:helperText="Please Enter Branch"
+               app:helperTextTextColor="@color/white"
+               app:helperTextTextAppearance="@color/backgroundsetter"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:theme="@style/EditTextThemeOverlay">
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Branch"
+                   android:inputType="text|textMultiLine"
+                   android:textStyle="bold"
+                   android:id="@+id/branch_jobadder"
+                   android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
+                   android:drawableEnd="@drawable/baseline_drive_file_rename_outline_24"
+                   android:textColorHint="@color/white"
+                   android:textColor="@color/white"/>
+
+
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:layout_marginRight="20dp"
+               app:boxStrokeColor="#E4400C"
+               app:boxStrokeWidthFocused="@dimen/cardview_default_radius"
+               app:boxCornerRadiusBottomStart="10dp"
+               app:boxCornerRadiusTopStart="10dp"
+               app:boxCornerRadiusBottomEnd="10dp"
+               app:boxCornerRadiusTopEnd="10dp"
+               app:boxBackgroundColor="@color/backgroundsetter"
+               app:boxStrokeWidth="2dp"
+               android:layout_marginLeft="20dp"
+               app:helperTextEnabled="true"
+               android:textColorHint="@color/white"
+               app:helperText="Please Enter Job Description"
+               app:helperTextTextColor="@color/white"
+               app:helperTextTextAppearance="@color/backgroundsetter"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:theme="@style/EditTextThemeOverlay">
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Job Description"
+                   android:inputType="text|textMultiLine"
+                   android:textStyle="bold"
+                   android:id="@+id/jobdescription_jobadder"
+                   android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
+                   android:drawableEnd="@drawable/baseline_drive_file_rename_outline_24"
+                   android:textColorHint="@color/white"
+                   android:textColor="@color/white"/>
+
+
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:layout_marginRight="20dp"
+               app:boxStrokeColor="#E4400C"
+               app:boxStrokeWidthFocused="@dimen/cardview_default_radius"
+               app:boxCornerRadiusBottomStart="10dp"
+               app:boxCornerRadiusTopStart="10dp"
+               app:boxCornerRadiusBottomEnd="10dp"
+               app:boxCornerRadiusTopEnd="10dp"
+               app:boxBackgroundColor="@color/backgroundsetter"
+               app:boxStrokeWidth="2dp"
+               android:layout_marginLeft="20dp"
+               app:helperTextEnabled="true"
+               android:textColorHint="@color/white"
+               app:helperText="Please Enter package Amount"
+               app:helperTextTextColor="@color/white"
+               app:helperTextTextAppearance="@color/backgroundsetter"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:theme="@style/EditTextThemeOverlay">
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Package Amount"
+                   android:inputType="number"
+                   android:textStyle="bold"
+                   android:id="@+id/package_amount_jobadder"
+                   android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
+                   android:drawableEnd="@drawable/baseline_account_balance_wallet_24"
+                   android:textColorHint="@color/white"
+                   android:textColor="@color/white"/>
+
+
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:layout_marginRight="20dp"
+               app:boxStrokeColor="#E4400C"
+               app:boxStrokeWidthFocused="@dimen/cardview_default_radius"
+               app:boxCornerRadiusBottomStart="10dp"
+               app:boxCornerRadiusTopStart="10dp"
+               app:boxCornerRadiusBottomEnd="10dp"
+               app:boxCornerRadiusTopEnd="10dp"
+               app:boxBackgroundColor="@color/backgroundsetter"
+               app:boxStrokeWidth="2dp"
+               android:layout_marginLeft="20dp"
+               app:helperTextEnabled="true"
+               android:textColorHint="@color/white"
+               app:helperText="Please Enter Link"
+               app:helperTextTextColor="@color/white"
+               app:helperTextTextAppearance="@color/backgroundsetter"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:theme="@style/EditTextThemeOverlay">
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Link"
+                   android:inputType="text|textMultiLine"
+                   android:textStyle="bold"
+                   android:id="@+id/link_jobadder"
+                   android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
+                   android:drawableEnd="@drawable/baseline_drive_file_rename_outline_24"
+                   android:textColorHint="@color/white"
+                   android:textColor="@color/white"/>
+
+
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:layout_marginRight="20dp"
+               app:boxStrokeColor="#E4400C"
+               app:boxStrokeWidthFocused="@dimen/cardview_default_radius"
+               app:boxCornerRadiusBottomStart="10dp"
+               app:boxCornerRadiusTopStart="10dp"
+               app:boxCornerRadiusBottomEnd="10dp"
+               app:boxCornerRadiusTopEnd="10dp"
+               app:boxBackgroundColor="@color/backgroundsetter"
+               app:boxStrokeWidth="2dp"
+               android:layout_marginLeft="20dp"
+               app:helperTextEnabled="true"
+               android:textColorHint="@color/white"
+               app:helperText="Please Enter last date"
+               app:helperTextTextColor="@color/white"
+               app:helperTextTextAppearance="@color/backgroundsetter"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:theme="@style/EditTextThemeOverlay">
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Last Date"
+                   android:inputType="date"
+                   android:textStyle="bold"
+                   android:id="@+id/lastdate_jobadder"
+                   android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
+                   android:drawableEnd="@drawable/baseline_date_range_24"
+                   android:textColorHint="@color/white"
+                   android:textColor="@color/white"/>
+
+
+           </com.google.android.material.textfield.TextInputLayout>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textAlignment="textStart"
+               android:text="Upload Company Logo"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+               android:textSize="20sp"
+               android:layout_margin="20dp"/>
+           <ImageView
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:layout_gravity="center"
+               android:src="@drawable/baseline_image_search_24"
+               android:id="@+id/image_logo"/>
+           <androidx.appcompat.widget.AppCompatButton
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/btn_background"
+               android:layout_margin="20dp"
+               android:text="Upload"
+               android:textStyle="bold"
+               android:textColor="@color/white"/>
+       </androidx.appcompat.widget.LinearLayoutCompat>
+   </ScrollView>
+</RelativeLayout>
