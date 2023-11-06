@@ -12,5 +12,6 @@ public class job_adder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_job_adder);
+
     }
 }

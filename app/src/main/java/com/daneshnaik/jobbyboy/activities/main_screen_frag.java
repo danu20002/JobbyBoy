@@ -34,6 +34,10 @@ public class main_screen_frag extends Fragment {
                 startActivity(new Intent(getContext(), job_adder.class));
             }
         });
+
+
+
+
         return view;
     }
 }
