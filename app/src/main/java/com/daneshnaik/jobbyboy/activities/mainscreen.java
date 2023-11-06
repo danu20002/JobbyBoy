@@ -30,15 +30,19 @@ SmoothBottomBar bottombar_main;
               switch (i){
                   case 0:
                       replace(new main_screen_frag());
+                      bottombar_main.setBarBackgroundColor(getColor(R.color.main_color));
                       break;
                   case 1:
                       replace(new recommend_frag());
+                      bottombar_main.setBarBackgroundColor(getColor(R.color.teal_700));
                       break;
                   case 2:
                       replace(new chat_frag());
+                      bottombar_main.setBarBackgroundColor(getColor(R.color.chat_color));
                       break;
                   case 3:
                       replace(new profile_frag());
+                      bottombar_main.setBarBackgroundColor(getColor(R.color.profile_color));
                       break;
               }
               return true;

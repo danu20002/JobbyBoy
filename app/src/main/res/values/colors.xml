@@ -12,5 +12,8 @@
     <color name="themesetter">#2176ff</color>
     <color name="default_theme">#8258fa</color>
     <color name="danesh_color">#3F51B5</color>
+    <color name="main_color">#03A9F4</color>
+    <color name="chat_color">#18BC1E</color>
+    <color name="profile_color">#0523CA</color>
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#673AB7</color>
 </resources>
