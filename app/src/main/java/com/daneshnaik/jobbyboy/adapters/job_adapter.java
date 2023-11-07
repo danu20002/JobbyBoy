@@ -2,6 +2,7 @@ package com.daneshnaik.jobbyboy.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,7 @@ public class job_adapter extends RecyclerView.Adapter<job_adapter.Viewport> {
         holder.apply_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent=new Intent(context, portal_link_opner.class);
                 intent.putExtra("link",jobDetails.getLink());
                 context.startActivity(intent);

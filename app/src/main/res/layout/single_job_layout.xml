@@ -2,22 +2,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-
+        android:background="@color/main_color"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp">
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="11dp"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="11dp"
-            android:layout_marginBottom="11dp"
+
+            android:background="@color/main_color"
+
             android:orientation="vertical"
             android:paddingLeft="5dp">
             <RelativeLayout
@@ -26,6 +24,7 @@
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:layout_margin="10dp"
                     android:id="@+id/company_image_data_single"
                     android:layout_alignParentEnd="true"
                     android:src="@drawable/person"/>
