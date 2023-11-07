@@ -332,6 +332,7 @@
                android:layout_margin="20dp"
                android:text="Upload"
                android:textStyle="bold"
+               android:id="@+id/upload_btn_jobadder"
                android:textColor="@color/white"/>
        </androidx.appcompat.widget.LinearLayoutCompat>
    </ScrollView>

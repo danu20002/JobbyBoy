@@ -46,6 +46,10 @@ dependencies {
     implementation 'com.airbnb.android:lottie:6.1.0'
 //smooth
     implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
-    //bottom nav
-    implementation 'com.etebarian:meow-bottom-navigation:1.2.0'
+
+
+    //swipe
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
 }

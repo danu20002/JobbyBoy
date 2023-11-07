@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.widget.FrameLayout;
 
 import com.daneshnaik.jobbyboy.R;
-import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+
 
 import me.ibrahimsn.lib.OnItemSelectedListener;
 import me.ibrahimsn.lib.SmoothBottomBar;
