@@ -14,11 +14,14 @@ import com.airbnb.lottie.LottieAnimationView;
 import com.daneshnaik.jobbyboy.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 TextView btn_signup_login;
@@ -46,10 +49,10 @@ LottieAnimationView loading_signIn;
          forgot_text=findViewById(R.id.forgot_text_signin);
          loading_signIn=findViewById(R.id.loading_signin);
          auth=FirebaseAuth.getInstance();
-//        if (auth.getCurrentUser()!=null && auth.getCurrentUser().isEmailVerified()){
-//            startActivity(new Intent(getApplicationContext(),mainscreen.class));
-//            finish();
-//        }
+        if (auth.getCurrentUser()!=null && auth.getCurrentUser().isEmailVerified()){
+            startActivity(new Intent(getApplicationContext(),mainscreen.class));
+            finish();
+        }
          signin_btn_signin.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
@@ -59,19 +62,20 @@ LottieAnimationView loading_signIn;
                  if(!email_taken.isEmpty()){
                      if(!password_taken.isEmpty()){
 
-                         auth.signInWithEmailAndPassword(email_taken,password_taken).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                         auth.signInWithEmailAndPassword(email_taken,password_taken).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                              @Override
-                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (auth.getCurrentUser().isEmailVerified()){
-                                    loading_signIn.setVisibility(View.INVISIBLE);
-                                    startActivity(new Intent(getApplicationContext(), mainscreen.class));
-                                    finish();
-                                }else{
-                                    loading_signIn.setVisibility(View.INVISIBLE);
-                                    Toast.makeText(MainActivity.this, "Please verify your Email we sent already verification email to your Inbox", Toast.LENGTH_SHORT).show();
-                                }
+                             public void onSuccess(AuthResult authResult) {
+                                 if (auth.getCurrentUser().isEmailVerified()){
+                                     loading_signIn.setVisibility(View.INVISIBLE);
+                                     startActivity(new Intent(getApplicationContext(), mainscreen.class));
+                                     finish();
+                                 }else{
+                                     loading_signIn.setVisibility(View.INVISIBLE);
+                                     Toast.makeText(MainActivity.this, "Please verify your Email we sent already verification email to your Inbox", Toast.LENGTH_SHORT).show();
+                                 }
                              }
-                         }).addOnFailureListener(new OnFailureListener() {
+                         })
+                         .addOnFailureListener(new OnFailureListener() {
                              @Override
                              public void onFailure(@NonNull Exception e) {
                                  loading_signIn.setVisibility(View.INVISIBLE);
