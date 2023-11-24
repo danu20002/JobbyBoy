@@ -68,4 +68,14 @@
         android:src="@drawable/baseline_add_24"
         android:id="@+id/floating_btn_main"
         android:layout_margin="20dp"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/page_loader"
+        app:lottie_loop="true"
+        android:layout_margin="20dp"
+
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        android:id="@+id/loading_main_frag"/>
 </RelativeLayout>

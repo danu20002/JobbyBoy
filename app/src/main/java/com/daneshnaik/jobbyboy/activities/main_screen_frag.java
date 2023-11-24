@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.daneshnaik.jobbyboy.R;
 import com.daneshnaik.jobbyboy.adapters.job_adapter;
 import com.daneshnaik.jobbyboy.classes.job_details;
@@ -34,6 +36,7 @@ public class main_screen_frag extends Fragment {
     job_adapter adapter;
     ArrayList<job_details> details;
     int id =0;
+    LottieAnimationView lottiloader;
 
     public main_screen_frag() {
         // Required empty public constructor
@@ -47,6 +50,8 @@ public class main_screen_frag extends Fragment {
          View view=inflater.inflate(R.layout.fragment_main_screen_frag, container, false);
         floatingActionButton_mainfrag=view.findViewById(R.id.floating_btn_main);
         recyclerView_main=view.findViewById(R.id.recyclerview_mainscreenfrag);
+        lottiloader=view.findViewById(R.id.loading_main_frag);
+         lottiloader.setVisibility(View.VISIBLE);
 
         auth=FirebaseAuth.getInstance();
         database=FirebaseDatabase.getInstance();
@@ -56,6 +61,7 @@ public class main_screen_frag extends Fragment {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                     job_details detailing=dataSnapshot.getValue(job_details.class);
                     details.add(detailing);
+                    lottiloader.setVisibility(View.INVISIBLE);
                     if(snapshot.exists())
                     {
                         id=(int) snapshot.getChildrenCount();
@@ -68,7 +74,8 @@ public class main_screen_frag extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+              lottiloader.setVisibility(View.INVISIBLE);
+                Toast.makeText(getContext(), "Please Try after some time", Toast.LENGTH_SHORT).show();
             }
         });
 
