@@ -226,8 +226,7 @@ LottieAnimationView loading_signup;
         });
 
         try {
-            Resources resources=getResources();
-            Drawable drawable=resources.getDrawable(R.drawable.logo_job);
+
             MimeMessage message=new MimeMessage(session);
             message.setFrom(new InternetAddress(username));
             message.setRecipients(MimeMessage.RecipientType.TO,InternetAddress.parse(FirebaseAuth.getInstance().getCurrentUser().getEmail()));
