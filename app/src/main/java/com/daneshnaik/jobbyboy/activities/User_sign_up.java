@@ -237,7 +237,7 @@ LottieAnimationView loading_signup;
             "Connect with other job seekers and employers\n"+
             "We're constantly working to improve Jobby Boy, so please let us know if you have any feedback. We hope you enjoy using Jobby Boy!\n"+
             "Best regards,\n"+
-            "The Jobby Boy Team"+R.drawable.baseline_account_balance_wallet_24);
+            "The Jobby Boy Team+\n"+R.drawable.jobbyboy_logo_original);
 
 
             Transport.send(message);
