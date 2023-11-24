@@ -1,12 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.JobbyBoy" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Base.Theme.JobbyBoy" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimary">@color/danu_color</item>
         <item name="boxStrokeColor">@color/purple_200</item>
         <item name="hintTextColor">#000000</item>
-        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
     </style>
 
     <style name="Theme.JobbyBoy" parent="Base.Theme.JobbyBoy" />

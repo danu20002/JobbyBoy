@@ -151,6 +151,7 @@
                 android:textColor="@color/white"
                 android:background="@drawable/btn_background"
                 android:id="@+id/apply_btn"
+                android:drawableEnd="@drawable/icons_external_link"
                 android:paddingRight="5dp"
                 android:text="Apply" />
 

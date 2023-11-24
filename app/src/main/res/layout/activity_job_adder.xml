@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+
     tools:context=".activities.job_adder">
    <ScrollView
        android:layout_width="match_parent"
@@ -18,7 +18,7 @@
                android:layout_height="wrap_content"
                android:textStyle="bold"
                android:textSize="30sp"
-               android:textColor="@color/white"
+
                android:text="Add Job Details"
                android:textAlignment="center"/>
 
@@ -38,9 +38,9 @@
                app:boxStrokeWidth="2dp"
                android:layout_marginLeft="20dp"
                app:helperTextEnabled="true"
-               android:textColorHint="@color/white"
+
                app:helperText="Please Enter Company Name"
-               app:helperTextTextColor="@color/white"
+
                app:helperTextTextAppearance="@color/backgroundsetter"
                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                android:theme="@style/EditTextThemeOverlay">
@@ -53,8 +53,8 @@
                    android:id="@+id/companyname_jobadder"
                    android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
                    android:drawableEnd="@drawable/baseline_drive_file_rename_outline_24"
-                   android:textColorHint="@color/white"
-                   android:textColor="@color/white"/>
+
+                  />
 
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -74,9 +74,9 @@
                app:boxStrokeWidth="2dp"
                android:layout_marginLeft="20dp"
                app:helperTextEnabled="true"
-               android:textColorHint="@color/white"
+
                app:helperText="Please Enter Location"
-               app:helperTextTextColor="@color/white"
+
                app:helperTextTextAppearance="@color/backgroundsetter"
                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                android:theme="@style/EditTextThemeOverlay">
@@ -89,8 +89,8 @@
                    android:id="@+id/location_jobadder"
                    android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
                    android:drawableEnd="@drawable/baseline_drive_file_rename_outline_24"
-                   android:textColorHint="@color/white"
-                   android:textColor="@color/white"/>
+
+                 />
 
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -110,9 +110,9 @@
                app:boxStrokeWidth="2dp"
                android:layout_marginLeft="20dp"
                app:helperTextEnabled="true"
-               android:textColorHint="@color/white"
+
                app:helperText="Please Enter Job Role"
-               app:helperTextTextColor="@color/white"
+
                app:helperTextTextAppearance="@color/backgroundsetter"
                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                android:theme="@style/EditTextThemeOverlay">
@@ -125,8 +125,8 @@
                    android:id="@+id/jobrole_jobadder"
                    android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
                    android:drawableEnd="@drawable/baseline_drive_file_rename_outline_24"
-                   android:textColorHint="@color/white"
-                   android:textColor="@color/white"/>
+
+                   />
 
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -146,9 +146,9 @@
                app:boxStrokeWidth="2dp"
                android:layout_marginLeft="20dp"
                app:helperTextEnabled="true"
-               android:textColorHint="@color/white"
+
                app:helperText="Please Enter Branch"
-               app:helperTextTextColor="@color/white"
+
                app:helperTextTextAppearance="@color/backgroundsetter"
                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                android:theme="@style/EditTextThemeOverlay">
@@ -161,8 +161,8 @@
                    android:id="@+id/branch_jobadder"
                    android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
                    android:drawableEnd="@drawable/baseline_drive_file_rename_outline_24"
-                   android:textColorHint="@color/white"
-                   android:textColor="@color/white"/>
+
+                  />
 
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -182,9 +182,9 @@
                app:boxStrokeWidth="2dp"
                android:layout_marginLeft="20dp"
                app:helperTextEnabled="true"
-               android:textColorHint="@color/white"
+
                app:helperText="Please Enter Job Description"
-               app:helperTextTextColor="@color/white"
+
                app:helperTextTextAppearance="@color/backgroundsetter"
                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                android:theme="@style/EditTextThemeOverlay">
@@ -197,8 +197,8 @@
                    android:id="@+id/jobdescription_jobadder"
                    android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
                    android:drawableEnd="@drawable/baseline_drive_file_rename_outline_24"
-                   android:textColorHint="@color/white"
-                   android:textColor="@color/white"/>
+
+                   />
 
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -218,9 +218,9 @@
                app:boxStrokeWidth="2dp"
                android:layout_marginLeft="20dp"
                app:helperTextEnabled="true"
-               android:textColorHint="@color/white"
+
                app:helperText="Please Enter package Amount"
-               app:helperTextTextColor="@color/white"
+
                app:helperTextTextAppearance="@color/backgroundsetter"
                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                android:theme="@style/EditTextThemeOverlay">
@@ -233,8 +233,8 @@
                    android:id="@+id/package_amount_jobadder"
                    android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
                    android:drawableEnd="@drawable/baseline_account_balance_wallet_24"
-                   android:textColorHint="@color/white"
-                   android:textColor="@color/white"/>
+
+                   />
 
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -254,9 +254,9 @@
                app:boxStrokeWidth="2dp"
                android:layout_marginLeft="20dp"
                app:helperTextEnabled="true"
-               android:textColorHint="@color/white"
+
                app:helperText="Please Enter Link"
-               app:helperTextTextColor="@color/white"
+
                app:helperTextTextAppearance="@color/backgroundsetter"
                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                android:theme="@style/EditTextThemeOverlay">
@@ -269,8 +269,7 @@
                    android:id="@+id/link_jobadder"
                    android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
                    android:drawableEnd="@drawable/baseline_drive_file_rename_outline_24"
-                   android:textColorHint="@color/white"
-                   android:textColor="@color/white"/>
+                   />
 
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -290,9 +289,9 @@
                app:boxStrokeWidth="2dp"
                android:layout_marginLeft="20dp"
                app:helperTextEnabled="true"
-               android:textColorHint="@color/white"
+
                app:helperText="Please Enter last date"
-               app:helperTextTextColor="@color/white"
+
                app:helperTextTextAppearance="@color/backgroundsetter"
                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                android:theme="@style/EditTextThemeOverlay">
@@ -305,8 +304,7 @@
                    android:id="@+id/lastdate_jobadder"
                    android:textEditPasteWindowLayout="@style/Widget.Material3.TextInputEditText.FilledBox"
                    android:drawableEnd="@drawable/baseline_date_range_24"
-                   android:textColorHint="@color/white"
-                   android:textColor="@color/white"/>
+                   />
 
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -315,7 +313,7 @@
                android:layout_height="wrap_content"
                android:textAlignment="textStart"
                android:text="Upload Company Logo"
-               android:textColor="@color/white"
+
                android:textStyle="bold"
                android:textSize="20sp"
                android:layout_margin="20dp"/>
@@ -333,7 +331,7 @@
                android:text="Upload"
                android:textStyle="bold"
                android:id="@+id/upload_btn_jobadder"
-               android:textColor="@color/white"/>
+               />
        </androidx.appcompat.widget.LinearLayoutCompat>
    </ScrollView>
 </RelativeLayout>

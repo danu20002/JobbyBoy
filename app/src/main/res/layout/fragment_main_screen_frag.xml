@@ -4,14 +4,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black"
     tools:context=".activities.main_screen_frag">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<com.google.android.material.appbar.MaterialToolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:title="Home"
+    style="@style/ThemeOverlay.Material3.Toolbar.Surface"
+    app:subtitle="Find  your Dream job ........"
+
+    android:background="@color/danu_color">
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Home"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="20sp"-->
+<!--        -->
+<!--        android:drawableLeft="@drawable/baseline_home_24"-->
+<!--        android:drawablePadding="5dp"/>-->
+</com.google.android.material.appbar.MaterialToolbar>
+
+
+
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+   >
   <androidx.appcompat.widget.LinearLayoutCompat
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:id="@+id/linerlayout_mainfrag"
       android:orientation="vertical">
       <androidx.appcompat.widget.SearchView
           android:id="@+id/serach_bar_user"
@@ -33,6 +59,7 @@
 
   </androidx.appcompat.widget.LinearLayoutCompat>
 </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

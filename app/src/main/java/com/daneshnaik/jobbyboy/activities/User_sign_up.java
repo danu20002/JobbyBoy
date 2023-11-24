@@ -8,6 +8,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Message;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.TextView;
@@ -27,6 +28,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import java.util.Properties;
+
+import javax.mail.Authenticator;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -112,6 +123,7 @@ LottieAnimationView loading_signup;
                                                                        database.getReference().child("Users").child(uid).setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                                            @Override
                                                                            public void onComplete(@NonNull Task<Void> task) {
+                                                                               sendemail();
                                                                                loading_signup.setVisibility(View.INVISIBLE);
                                                                                Toast.makeText(User_sign_up.this, "Uploaded successfully", Toast.LENGTH_SHORT).show();
                                                                                Intent intent=new Intent(User_sign_up.this,MainActivity.class);
@@ -193,4 +205,47 @@ LottieAnimationView loading_signup;
         }
 
     }
+    public void sendemail(){
+        String username="jobbyboyapp@gmail.com";
+        String password="jayaykgttshvoovf";
+        Properties props=new Properties();
+        props.put("mail.smtp.auth","true");
+        props.put("mail.smtp.SSL","true");
+        props.put("mail.smtp.starttls.enable","true");
+        props.put("mail.smtp.host","smtp.gmail.com");
+        props.put("mail.smtp.SSL","465");
+        props.put("mail.smtp.port","587");
+
+        javax.mail.Session session= Session.getInstance(props, new Authenticator() {
+            @Override
+            protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(username,password);
+            }
+        });
+
+        try {
+            MimeMessage message=new MimeMessage(session);
+            message.setFrom(new InternetAddress(username));
+            message.setRecipients(MimeMessage.RecipientType.TO,InternetAddress.parse(FirebaseAuth.getInstance().getCurrentUser().getEmail()));
+            message.setSubject("Welcome to NSS GIT");
+            message.setText("Dear" + "  "+FirebaseAuth.getInstance().getCurrentUser().getEmail()+"\n" +
+            "Dear Jobby Boy user,+\n"+
+            "Welcome to Jobby Boy! We're excited to have you join our community of job seekers and employers. We're here to help you find the perfect job or hire the perfect candidate. With Jobby Boy, you can:\n"+
+            "Search for jobs that match your interests and qualifications\n"+
+            "Apply for jobs with just a few clicks\n"+
+           "Receive notifications when new jobs are posted that match your criteria\n"+
+            "Connect with other job seekers and employers\n"+
+            "We're constantly working to improve Jobby Boy, so please let us know if you have any feedback. We hope you enjoy using Jobby Boy!\n"+
+            "Best regards,\n"+
+            "The Jobby Boy Team"+R.drawable.baseline_account_balance_wallet_24);
+
+
+            Transport.send(message);
+
+        }catch (MessagingException e){
+            throw new RuntimeException(e);
+        }
+
+    }
+
 }

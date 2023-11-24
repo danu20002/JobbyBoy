@@ -49,10 +49,10 @@ LottieAnimationView loading_signIn;
          forgot_text=findViewById(R.id.forgot_text_signin);
          loading_signIn=findViewById(R.id.loading_signin);
          auth=FirebaseAuth.getInstance();
-        if (auth.getCurrentUser()!=null && auth.getCurrentUser().isEmailVerified()){
-            startActivity(new Intent(getApplicationContext(),mainscreen.class));
-            finish();
-        }
+//        if (auth.getCurrentUser()!=null && auth.getCurrentUser().isEmailVerified()){
+//            startActivity(new Intent(getApplicationContext(),mainscreen.class));
+//            finish();
+//        }
          signin_btn_signin.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
