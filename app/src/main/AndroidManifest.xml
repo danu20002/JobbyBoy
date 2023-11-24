@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobbyBoy"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1045963508580365~8658981070"/>
         <activity
             android:name=".activities.Forgot_password"
             android:exported="false" />
