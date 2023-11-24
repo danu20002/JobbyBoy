@@ -227,7 +227,7 @@ LottieAnimationView loading_signup;
             MimeMessage message=new MimeMessage(session);
             message.setFrom(new InternetAddress(username));
             message.setRecipients(MimeMessage.RecipientType.TO,InternetAddress.parse(FirebaseAuth.getInstance().getCurrentUser().getEmail()));
-            message.setSubject("Welcome to NSS GIT");
+            message.setSubject("Welcome to JObby Boy ");
             message.setText("Dear" + "  "+FirebaseAuth.getInstance().getCurrentUser().getEmail()+"\n" +
             "Dear Jobby Boy user,+\n"+
             "Welcome to Jobby Boy! We're excited to have you join our community of job seekers and employers. We're here to help you find the perfect job or hire the perfect candidate. With Jobby Boy, you can:\n"+
@@ -237,7 +237,7 @@ LottieAnimationView loading_signup;
             "Connect with other job seekers and employers\n"+
             "We're constantly working to improve Jobby Boy, so please let us know if you have any feedback. We hope you enjoy using Jobby Boy!\n"+
             "Best regards,\n"+
-            "The Jobby Boy Team+\n"+R.drawable.jobbyboy_logo_original);
+            "The Jobby Boy Team+\n"+R.drawable.jobbyboy_logo_original+R.drawable.logo_job);
 
 
             Transport.send(message);
