@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Message;
@@ -224,20 +226,27 @@ LottieAnimationView loading_signup;
         });
 
         try {
+            Resources resources=getResources();
+            Drawable drawable=resources.getDrawable(R.drawable.logo_job);
             MimeMessage message=new MimeMessage(session);
             message.setFrom(new InternetAddress(username));
             message.setRecipients(MimeMessage.RecipientType.TO,InternetAddress.parse(FirebaseAuth.getInstance().getCurrentUser().getEmail()));
             message.setSubject("Welcome to JObby Boy ");
             message.setText("Dear" + "  "+FirebaseAuth.getInstance().getCurrentUser().getEmail()+"\n" +
-            "Dear Jobby Boy user,+\n"+
-            "Welcome to Jobby Boy! We're excited to have you join our community of job seekers and employers. We're here to help you find the perfect job or hire the perfect candidate. With Jobby Boy, you can:\n"+
-            "Search for jobs that match your interests and qualifications\n"+
+            "Dear Jobby Boy user,\n"+
+            "Welcome to Jobby Boy! We're excited to have you join our community of job seekers and employers. We're here to help you find the perfect job or hire the perfect candidate. With Jobby Boy, you can:\n\n\n\n"+
+
+
+             "Search for jobs that match your interests and qualifications\n"+
             "Apply for jobs with just a few clicks\n"+
            "Receive notifications when new jobs are posted that match your criteria\n"+
-            "Connect with other job seekers and employers\n"+
-            "We're constantly working to improve Jobby Boy, so please let us know if you have any feedback. We hope you enjoy using Jobby Boy!\n"+
+            "Connect with other job seekers and employers\n\n\n"+
+
+            "We're constantly working to improve Jobby Boy, so please let us know if you have any feedback. We hope you enjoy using Jobby Boy!\n\n\n\n"+
+
+
             "Best regards,\n"+
-            "The Jobby Boy Team+\n"+R.drawable.jobbyboy_logo_original+R.drawable.logo_job);
+            "The Jobby Boy Team+\n"+"https://firebasestorage.googleapis.com/v0/b/jobyy-assets.appspot.com/o/logo_job.png?alt=media&token=daab34b8-a0f3-4143-a745-b1fc224bdc9b");
 
 
             Transport.send(message);
